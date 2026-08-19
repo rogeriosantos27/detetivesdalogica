@@ -1,0 +1,6 @@
+{
+  "name": "Amigas na Lanchonete",
+  "description": "Use a lógica e siga as pistas para descobrir a combinação perfeita entre as camisetas, idades e pedidos das nossas amigas num clássico jogo de raciocínio lógico.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
