@@ -245,7 +245,7 @@ export function generatePuzzle(difficulty: Difficulty): Puzzle {
         const puzzle = tryGeneratePuzzle(difficulty);
         if (puzzle) {
             recentScenarios.push(puzzle.scenario.id);
-            if (recentScenarios.length > 2) recentScenarios.shift();
+            if (recentScenarios.length >= 15) recentScenarios.shift();
             return puzzle;
         }
     }

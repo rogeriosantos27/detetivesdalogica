@@ -137,10 +137,10 @@ export default function App() {
       <div className="min-h-screen bg-slate-900 bg-cover bg-center bg-fixed text-slate-100 flex flex-col items-center justify-center font-sans p-4" style={{ backgroundImage: "linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,58,138,0.95)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2574&auto=format&fit=crop')" }}>
         <div className="bg-black/60 backdrop-blur-xl p-8 sm:p-12 rounded-3xl border border-white/20 shadow-2xl max-w-2xl w-full text-center animate-in fade-in zoom-in duration-500">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-yellow-400 drop-shadow-lg mb-6 tracking-tight leading-tight">
-            Amigas na Lanchonete
+            Detetives da Lógica
           </h1>
           <p className="text-lg sm:text-xl text-slate-200 mb-10 font-medium leading-relaxed">
-            Bem-vindo ao gerador automático de desafios! Escolha uma dificuldade abaixo para iniciar. Cada partida gera um enigma lógico matematicamente único, com pistas inéditas e garantia de solução única.
+            Cada partida é um novo mistério. Analise as pistas e descubra a solução!
           </p>
           
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
@@ -172,10 +172,10 @@ export default function App() {
       <div className="w-full max-w-7xl mx-auto flex flex-col gap-4 sm:gap-8 pb-8 sm:pb-12">
         <header className="text-center mt-2 sm:mt-4 px-2 sm:px-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 drop-shadow-lg mb-2 sm:mb-4 tracking-tight leading-tight">
-            {puzzle?.scenario.title || 'Desafios de Lógica'}
+            Detetives da Lógica
           </h1>
           <p className="text-sm sm:text-lg text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow px-2">
-            {puzzle?.scenario.description || 'Escolha um nível abaixo para gerar um desafio aleatório. Use a lógica e siga as pistas para descobrir a combinação perfeita!'}
+            Cada partida é um novo mistério. Analise as pistas e descubra a solução!
           </p>
           
           <div className="mt-6 flex flex-wrap justify-center gap-2 sm:gap-3 bg-black/40 p-3 sm:p-4 rounded-2xl backdrop-blur-md border border-white/10 max-w-4xl mx-auto">
@@ -201,7 +201,17 @@ export default function App() {
             <p className="text-slate-300 text-center px-4">Testando milhares de combinações para garantir uma solução perfeita.</p>
           </div>
         ) : puzzle ? (
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 sm:gap-8 items-start px-2 sm:px-0 animate-in fade-in duration-500">
+          <div className="flex flex-col gap-4 sm:gap-8 w-full animate-in fade-in duration-500">
+            <div className="text-center mb-2 px-2">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white drop-shadow-md">
+                {puzzle.scenario.title}
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl mx-auto font-medium">
+                {puzzle.scenario.description}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 sm:gap-8 items-start px-2 sm:px-0">
             <div className="xl:col-span-4 flex flex-col gap-4">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl border border-white/20">
                 <div className="flex justify-between items-center mb-4 sm:mb-6">
@@ -327,6 +337,7 @@ export default function App() {
                   </button>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         ) : null}
